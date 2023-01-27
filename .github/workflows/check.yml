@@ -1,6 +1,9 @@
 name: Upgrade Caddy
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "0 18 * * *"
 
@@ -10,7 +13,7 @@ jobs:
     steps:
       - name: Check if update available
         id: check
-        uses: lucacome/docker-image-update-checker@v1
+        uses: lucacome/docker-image-update-checker@main
         with:
           base-image: caddy:latest
           image: potat0000/caddy:latest
