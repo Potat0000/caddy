@@ -17,6 +17,7 @@ jobs:
         with:
           base-image: caddy:latest
           image: potat0000/caddy:latest
+          platforms: linux/amd64
         env:
           DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
 
