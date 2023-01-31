@@ -13,7 +13,9 @@ jobs:
     steps:
       - name: Check if update available
         id: check
-        uses: lucacome/docker-image-update-checker@v1
+        uses: lucacome/docker-image-update-checker@main
+        env:
+          DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
         with:
           base-image: caddy:latest
           image: potat0000/caddy:latest
