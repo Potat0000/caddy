@@ -17,7 +17,7 @@ jobs:
         env:
           DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
         with:
-          base-image: caddy:latest
+          base-image: library/caddy:latest
           image: potat0000/caddy:latest
 
   build:
